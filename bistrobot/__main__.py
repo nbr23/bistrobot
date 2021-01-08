@@ -17,7 +17,7 @@ def main():
         gpio_buzzer = int(args.gpio_buzzer)
         gpio_feeder = int(args.gpio_feeder)
         gpio_sensor = int(args.gpio_sensor)
-        garcon = Bistrobot(gpio_feeder, gpio_sensor, gpio_buzzer)
+        garcon = Bistrobot(gpio_feeder, gpio_sensor)
         portions = args.portions
         if portions < 1:
             print("The number of portions must be >= 1")
