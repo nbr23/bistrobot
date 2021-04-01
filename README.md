@@ -27,6 +27,7 @@ optional arguments:
   --gpio_feeder GPIO_FEEDER
                         GPIO pin number for the Feeder
   -m, --meal            Serve a meal
+  -v, --verbose            Print meal information
   -p PORTIONS, --portions PORTIONS
                         Number of portions to server for this meal
   -d DELAY, --delay DELAY

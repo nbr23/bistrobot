@@ -10,6 +10,7 @@ def main():
     parser.add_argument('--gpio_sensor', type=int, help='GPIO pin number for the Sensor')
     parser.add_argument('--gpio_feeder', type=int, help='GPIO pin number for the Feeder')
     parser.add_argument('-m', '--meal', action='store_true', help='Serve a meal')
+    parser.add_argument('-v', '--verbose', action='store_true', help='Print meal information')
     parser.add_argument('-p', '--portions', type=int, default=1, help='Number of portions to server for this meal')
     parser.add_argument('-d', '--delay', type=int, default=100, help='Number of seconds to pause for between each portion')
     parser.add_argument('-s', '--sleep', type=int, default=5, help='Number of seconds to pause for after buzzing the bell')
@@ -28,6 +29,8 @@ def main():
             parser.print_help()
             return 1
         garcon.serve_meal(portions, args.delay)
+        if args.verbose:
+            print(f'Poured {portions} portion(s)!')
 
 if __name__ == "__main__":
     sys.exit(main())
