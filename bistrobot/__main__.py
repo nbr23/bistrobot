@@ -30,7 +30,7 @@ def main():
             return 1
         garcon.serve_meal(portions, args.delay)
         if args.verbose:
-            print(f'Poured {portions} portion(s)!')
+            print('Poured %s portion(s)!' % portions)
 
 if __name__ == "__main__":
     sys.exit(main())
